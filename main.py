@@ -39,24 +39,65 @@ SERVICE_ACCOUNT_FILE = json.loads(secret_gsheet_value)
 
 
 
-# always specify creds as "None" first before setting it afterwards
-CREDS = None
-CREDS = service_account.Credentials.from_service_account_info(SERVICE_ACCOUNT_FILE, scopes=SCOPES) 
 
 
-# Now call the Sheets API    
-gsheet_service = build('sheets', 'v4', credentials = CREDS)
-sheet = gsheet_service.spreadsheets()
-result = sheet.values().get(spreadsheetId = SPREADSHEET_ID, range = GET_RANGE_NAME).execute()
 
-# get the data, otherwise return an empty list
-feedback = result.get('values', []) 
 
-# assign headers which is always going to be row index 0
-feedback_headers = feedback.pop(0)
+import nltk
+from nltk.corpus import stopwords
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-# create a new dataframe with the headers
-feedback_df = pd.DataFrame(feedback, columns = feedback_headers)
+############################  
+# Run Sentiment Analysis
+############################
 
-# view it
-print(feedback_df)
+# create a deep copy of the df so we dont mess up the original df
+sentiment_df = copy.deepcopy(feedback_df)
+
+# set your stopwords
+nltk.download('stopwords')
+stop_words = set(stopwords.words("english"))
+print(stop_words)
+
+# remove stop words from feedback column. Assign it to a new column called "feedback_without stopwords"
+sentiment_df['feedback_without_stopwords'] = sentiment_df['Feedback'].apply(lambda x: ' '.join([word for word in x.split() if word not in (stop_words)]))
+
+# view df
+print(sentiment_df)
+
+# now load vader
+nltk.download('vader_lexicon')
+
+# get the vader sentiment intensity analyser
+the_force = SentimentIntensityAnalyzer()
+
+# get polarity scores from column in df where stopwords have been removed. Assign to a new column called "polarity scores".
+sentiment_df['polarity_scores'] = sentiment_df['feedback_without_stopwords'].apply(the_force.polarity_scores)
+
+# view df
+print(sentiment_df)
+
+
+# get the compound scores only, round to 2 decimals
+compound_scores = [round(the_force.polarity_scores(i)['compound'], 2) for i in sentiment_df['feedback_without_stopwords']]
+
+# now create new column in the dataframe and save compound scores in it
+sentiment_df['compound_scores'] = compound_scores
+
+# view df
+print(sentiment_df)
+
+# create simple logic
+sent_logic = [
+    (sentiment_df['compound_scores'] < 0),
+    (sentiment_df['compound_scores'] >= 0) & (sentiment_df['compound_scores'] < 0.5),
+    (sentiment_df['compound_scores']  >= 0.5)
+    ]
+
+sent_summary = ['negative', 'neutral', 'positive']
+
+# assign to a new column
+sentiment_df['sentiment'] = np.select(sent_logic, sent_summary)
+
+# view df
+print(sentiment_df)
