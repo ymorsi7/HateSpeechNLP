@@ -6,7 +6,10 @@ import google.auth
 from google.cloud import secretmanager
 # Python API for Google Sheets
 import gspread
-from gspread_dataframe import set_with_dataframe
+import pandas as pd
+
+#from gspread_dataframe import set_with_dataframe
+from gspread import set_with_dataframe
 
 # Standard Python packages
 import pandas as pd
