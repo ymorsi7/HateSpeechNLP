@@ -10,6 +10,7 @@ import google.cloud
 # Google Sheets API
 
 from google.cloud import secretmanager
+
 # Python API for Google Sheets
 import gspread
 import pandas as pd
