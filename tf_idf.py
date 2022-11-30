@@ -36,7 +36,7 @@ def get_top_n_words(corpus, n=None):
 
 
 
-comments = pd.read_csv('data.csv', encoding='utf-8')
+comments = pd.read_csv('data/data.csv', encoding='utf-8')
 df = pd.DataFrame(comments)
 df.drop(['Number'], axis=1, inplace=True) # Drop the Number column (cleaning up the data)
 vid1 = vid2 = vid3 = vid4 = vid5 = df
