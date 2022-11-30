@@ -1,4 +1,4 @@
-# NLP Sexism Detection
+# NLP Hate Speech Detection
 
 ## About
 
