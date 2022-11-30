@@ -1,113 +1,95 @@
-
-# Google Credentials
-from googleapiclient.discovery import build
-
-from google.oauth2 import service_account
-import google.auth
-
-import google.cloud
-
-# Google Sheets API
-
-from google.cloud import secretmanager
-
-# Python API for Google Sheets
-import gspread
 import pandas as pd
+import numpy as np 
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import TfidfVectorizer
 
-#from gspread_dataframe import set_with_dataframe
-from gspread import set_with_dataframe
+def get_top_n_words(corpus, n=None):
+    '''
+    List the top n words in a vocabulary according to occurrence in a text corpus.
+    
+    Args:
+        corpus (list): a list of text documents.
+        n (int): number of top words to return.
+    '''
+    assert isinstance(corpus, list), "This must be a list!"
+    assert isinstance(n, int), "This must be an integer!"
 
-# Standard Python packages
-import pandas as pd
-import numpy as np
-# to create deep copy
-import copy
-# for JSON encoding or decoding
-import json
+    tfidf_vectorizer = TfidfVectorizer(use_idf=True)
+    tfidf_vectorizer_vectors=tfidf_vectorizer.fit_transform(corpus)
+    first_vector_tfidfvectorizer=tfidf_vectorizer_vectors[1]
+    df_tfidfvectorizer = pd.DataFrame(first_vector_tfidfvectorizer.T.todense(), index=tfidf_vectorizer.get_feature_names(), columns=["tfidf"])
 
-SPREADSHEET_ID = "1_jYx0O8yC0BiH6mn8ci-axA8vah9DHSfx1oRyyhnv8g"
-
-GET_RANGE_NAME = "Sheet1!A1:C"
-
-project_number = 635971252563
-
-secret_gsheet = "moftah"
-
-secret_version_gsheet = 1
-
-
-# Authenticate Google Sheets
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-client = secretmanager.SecretManagerServiceClient()
-
-secret_gsheet_name = f"projects/{project_number}/secrets/{secret_gsheet}/versions/{secret_version_gsheet}"
-secret_gsheet_value = client.access_secret_version(request={"name": secret_gsheet_name}).payload.data.decode("UTF-8")
-
-# Assign secret
-SERVICE_ACCOUNT_FILE = json.loads(secret_gsheet_value)
+    commentsTF_IDF = df_tfidfvectorizer.sort_values(by=["tfidf"],ascending=False)
+    return commentsTF_IDF.head(n)
 
 
 
 
+comments = pd.read_csv('data.csv', encoding='utf-8')
+df = pd.DataFrame(comments)
+df.drop(['Number'], axis=1, inplace=True) # Drop the Number column (cleaning up the data)
+vid1 = vid2 = vid3 = vid4 = vid5 = df
 
 
 
-import nltk
-from nltk.corpus import stopwords
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
-############################  
-# Run Sentiment Analysis
-############################
-
-# create a deep copy of the df so we dont mess up the original df
-sentiment_df = copy.deepcopy(feedback_df)
-
-# set your stopwords
-nltk.download('stopwords')
-stop_words = set(stopwords.words("english"))
-print(stop_words)
-
-# remove stop words from feedback column. Assign it to a new column called "feedback_without stopwords"
-sentiment_df['feedback_without_stopwords'] = sentiment_df['Feedback'].apply(lambda x: ' '.join([word for word in x.split() if word not in (stop_words)]))
-
-# view df
-print(sentiment_df)
-
-# now load vader
-nltk.download('vader_lexicon')
-
-# get the vader sentiment intensity analyser
-the_force = SentimentIntensityAnalyzer()
-
-# get polarity scores from column in df where stopwords have been removed. Assign to a new column called "polarity scores".
-sentiment_df['polarity_scores'] = sentiment_df['feedback_without_stopwords'].apply(the_force.polarity_scores)
-
-# view df
-print(sentiment_df)
+# Let's find the 15 words in each video.
 
 
-# get the compound scores only, round to 2 decimals
-compound_scores = [round(the_force.polarity_scores(i)['compound'], 2) for i in sentiment_df['feedback_without_stopwords']]
+# "Women Should Not Be in Combat Roles: Change My Mind"
+vid1 = vid1[vid1.Video == 1]
+vid1List = vid1["Comment"].values.tolist()
+#print(get_top_n_words(vid1List, 15))
 
-# now create new column in the dataframe and save compound scores in it
-sentiment_df['compound_scores'] = compound_scores
 
-# view df
-print(sentiment_df)
 
-# create simple logic
-sent_logic = [
-    (sentiment_df['compound_scores'] < 0),
-    (sentiment_df['compound_scores'] >= 0) & (sentiment_df['compound_scores'] < 0.5),
-    (sentiment_df['compound_scores']  >= 0.5)
-    ]
+# "The Problem With Modern Women"
+vid2 = df[df.Video == 2]
+vid2List = vid1["Comment"].values.tolist()
+#print(get_top_n_words(vid2List, 15))
 
-sent_summary = ['negative', 'neutral', 'positive']
 
-# assign to a new column
-sentiment_df['sentiment'] = np.select(sent_logic, sent_summary)
 
-# view df
-print(sentiment_df)
+# "Tucker Carlson Gives CNN Some Tips About Sexism in Hilarious Segment"
+vid3 = df[df.Video == 3]
+vid3List = vid1["Comment"].values.tolist()
+#print(get_top_n_words(vid3List, 15))
+
+
+
+# "WOMAN DEFENDS ANDREW TATE AND ARGUES WITH FEMINISTS AND TRANGENDERS"
+vid4 = df[df.Video == 4]
+vid4List = vid1["Comment"].values.tolist()
+#print(get_top_n_words(vid4List, 15))
+
+
+
+# "Massive Feminist March Against Gender Violence in Rome"
+vid5 = df[df.Video == 5]
+vid5List = vid5["Comment"].values.tolist()
+print(get_top_n_words(vid5List, 15))
+
+
+
+# Top 15 Words Overall
+
+df.drop(['Video'], axis=1, inplace=True) # Drop the video column (cleaning up the data)
+commentsList = df["Comment"].values.tolist()
+#print(get_top_n_words(commentsList, 15))
+
+
+
+
+
+# count = CountVectorizer()
+# wordCount = count.fit_transform(commentsList)
+# wordCountShape = wordCount.shape
+# wordCountArray = wordCount.toarray()
+
+# tfidf_transformer = TfidfTransformer(smooth_idf=True,use_idf=True)
+# tfidf_transformer.fit(wordCount)
+# df_idf = pd.DataFrame(tfidf_transformer.idf_, index=count.get_feature_names(),columns=["idf_weights"])
+# #inverse document frequency
+# df_idf.sort_values(by=['idf_weights'])
+
+

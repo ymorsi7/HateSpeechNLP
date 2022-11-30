@@ -1,8 +1,8 @@
-# RumbleNLP
+# NLP Sexism Detection
 
 ## About
 
-This is my first NLP project. What follows is my initial thoughts on my approach.
+This is my first NLP project. What follows are my initial thoughts on my approach.
 
 - NLP can be used to automatically analyze and structure text (quickly and cost-effectively).
 - Using Tf-Idf vectorization, we’ll extract keywords that are classified as hate speech.
@@ -28,3 +28,8 @@ To find sexist content on Rumble, I selected five videos relating to sexism on t
 
 I decided to select the top 50 comments on each video, which totaled 250 comments.
 
+## Data Cleaning
+
+After scraping the data, I needed to clean it. I did this by removing all non-alphanumeric characters, converting all text to lowercase, and removing all stopwords.
+
+## Tf-Idf Vectorization
