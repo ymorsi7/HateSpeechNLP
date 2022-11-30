@@ -4,6 +4,16 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+from sklearn. model_selection import train_test_split
+from sklearn. tree import DecisionTreeClassifier
+
+import nltk
+import re
+nltk. download('stopwords')
+from nltk. corpus import stopwords
+stopword=set(stopwords.words('english'))
+stemmer = nltk. SnowballStemmer("english")
+
 def get_top_n_words(corpus, n=None):
     '''
     List the top n words in a vocabulary according to occurrence in a text corpus.
@@ -67,29 +77,15 @@ vid4List = vid1["Comment"].values.tolist()
 # "Massive Feminist March Against Gender Violence in Rome"
 vid5 = df[df.Video == 5]
 vid5List = vid5["Comment"].values.tolist()
-print(get_top_n_words(vid5List, 15))
+#print(get_top_n_words(vid5List, 15))
 
 
 
 # Top 15 Words Overall
-
 df.drop(['Video'], axis=1, inplace=True) # Drop the video column (cleaning up the data)
 commentsList = df["Comment"].values.tolist()
 #print(get_top_n_words(commentsList, 15))
 
 
-
-
-
-# count = CountVectorizer()
-# wordCount = count.fit_transform(commentsList)
-# wordCountShape = wordCount.shape
-# wordCountArray = wordCount.toarray()
-
-# tfidf_transformer = TfidfTransformer(smooth_idf=True,use_idf=True)
-# tfidf_transformer.fit(wordCount)
-# df_idf = pd.DataFrame(tfidf_transformer.idf_, index=count.get_feature_names(),columns=["idf_weights"])
-# #inverse document frequency
-# df_idf.sort_values(by=['idf_weights'])
 
 
