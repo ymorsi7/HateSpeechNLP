@@ -34,50 +34,96 @@
 					</nav>
 				</header>
 
+
+
 			<!-- Main -->
 				<div id="main" class="wrapper style1">
-					<div class="container">
+					<div class="container" id = "tf">
 						<header class="major">
 							<h2>About</h2>
-							<p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
+							<p>Below are descriptions of the tasks done to complete this project</p>
 						</header>
+
+
+						<div id="main" > 
+							<p>Before working with the data that I scraped, I needed to clean it. Thankfully, because I manually attained my data, it was already in a clean format, and all that I needed to do was drop the unnecessary columns.</p>
+						</div>
+						
+
+						<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+						<script id="MathJax-script" async
+								src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+						</script>
+
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
-
 								<!-- Sidebar -->
 									<section id="sidebar">
 										<section>
-											<h3>Magna Feugiat</h3>
-											<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
-											<footer>
-												<ul class="actions">
-													<li><a href="#" class="button">Learn More</a></li>
-												</ul>
-											</footer>
-										</section>
-										<hr />
-										<section>
-											<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet Lorem Tempus</h3>
-											<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-											<footer>
-												<ul class="actions">
-													<li><a href="#" class="button">Learn More</a></li>
-												</ul>
-											</footer>
+											<h3>TF-IDF Vectorization</h3>
+
+											<p>
+												\[TF = {num\ of\ instances\ of\ word\ in\ doc \over total\ number\ of\ words\ in\ doc}\]
+											  </p>
+
+											  <p>
+												\[IDF = \log({num\ of\ docs\ in\ corpus \over num\ of\ docs\ with\ term})\]
+											  </p>
+											
+											<p>The TF-IDF is calculated by multiplying the TF (term frequency) and IDF (inverse document frequency).</p>
+											<p>Below is the function I used to find the top n words in a corpus. In our case, the corpus was the comments section of the selected videos.
+
+												First, we create a TF-IDF vectorizer object. Then, we fit the vectorizer to the corpus. After that, we create a dataframe of the top n words in the corpus, and return it to the user.</p>
+
+											<a href = "https://github.com/ymorsi7/HateSpeechNLP#term-frequency-inverse-document-frequency-tf-idf" target = "blank"><p>Click here to see the function for this.</p></a>
+											
+											<p>Below is a list of the top 15 words from the comments found with TF-IDF vectorization:</p>
+												<code>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tfidf<br>
+													be&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.245173<br>
+													injured&nbsp;&nbsp;&nbsp;0.243024<br>
+													affected&nbsp;&nbsp;0.243024<br>
+													more&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.234565<br>
+													would&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.223824<br>
+													woman&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.211882<br>
+													in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.198536<br>
+													their&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.189318<br>
+													even&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.185259<br>
+													those&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.185259<br>
+													being&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.175961<br>
+													than&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.161941<br>
+													by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.151469<br>
+													combat&nbsp;&nbsp;&nbsp;&nbsp;0.149216<br>
+													it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.145994<br>
+
+
+												</code>
+												<br>
+												<p>The TF-IDF localization proved to be useful, as it shows the prevelance of words such as "woman," "injured," and "affected" in the comments. This is useful, as it shows that the users are engaged in their respective videos, and have a lot to say about women.
+
+												</p>
+										
+										
+										
+										
+										
+										
 										</section>
 									</section>
 
 							</div>
-							<div class="col-8 col-12-medium imp-medium">
+
+							<div class="col-8 col-12-medium imp-medium" id = "dt">
 
 								<!-- Content -->
 									<section id="content">
 										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<h3>Dolore Amet Consequat</h3>
+										<h3>Decision Tree Model</h3>
 										<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
 										<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique.</p>
-										<h3>Sed Magna Ornare</h3>
+										
+										
+										<h3 id = "wc">Word Clouds</h3>
 										<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
 										<ul>
 											<li>Faucibus orci lobortis ac adipiscing integer.</li>
@@ -120,6 +166,11 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://kit.fontawesome.com/97ac8d9bb6.js" crossorigin="anonymous"></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+			<script>hljs.initHighlightingOnLoad();</script>
+
 
 	</body>
 </html>
