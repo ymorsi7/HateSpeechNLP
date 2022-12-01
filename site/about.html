@@ -28,6 +28,7 @@
 						<ul>
 							<li><a href="#tf">TF-IDF Vectorization</a></li>
 							<li><a href="#dt">Decision Tree</a></li>
+							<li><a href="#sa">Sentiment Analysis</a></li>
 							<li><a href="#wc">Word Clouds</a></li>
 						</ul>
 					</li>
@@ -129,7 +130,15 @@
 
 
 
+								<h3 id = "sa">Sentiment Analysis</h3>
 
+								<p>Using <a href="https://www.meaningcloud.com/"
+									target="blank">MeaningCloud</a>, I was able to conduct sentiment analysis on the comments, which can be found <a
+										href="https://github.com/ymorsi7/HateSpeechNLP/tree/main/csv/sentimentAnalysis.csv">here</a>.</p>
+
+								<p>The main two numbers I observed were the irony and the agreement/disagreement proportions, but I spent more attention on the former. I was able to find that over <b>97%</b> of the comments were unironic, and that <b>35%</b> of the comments showed disagreement.</p>
+
+								<p>The percentage of unironic comments shows that the users are serious about their beliefs, and not just joking around, which is a rather common justification for hate speech.</p>
 
 
 							</section>
@@ -186,7 +195,7 @@ print("Percentage of hate speech comments: " + str(numHate/len(binClfr)))
 							</p>
 
 
-							<h3 id="wc">Word Clouds (Bonus)</h3>
+							<h3 id="wc">Word Clouds</h3>
 							<p>Using the Google Sheets extensions <a href="https://www.meaningcloud.com/"
 									target="blank">MeaningCloud</a> and <a href="https://www.chartexpo.com"
 									target="blank">ChartExpo</a>, I was able to create word clouds from extracted
