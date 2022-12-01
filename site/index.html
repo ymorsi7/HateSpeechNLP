@@ -1,15 +1,11 @@
 <!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Landed by HTML5 UP</title>
+		<title>HateSpeechNLP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="images/favi.png">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload landing">
@@ -17,29 +13,22 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<h1 id="logo"><a href="index.html">HateSpeechNLP</a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li>
-								<a href="#">Layouts</a>
+								<a href="#">Information</a>
 								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
+									<li><a href="information.html#td">TD-IDF Vectorization</a></li>
+									<li><a href="information.html#dt">Decision Tree</a></li>
+									<li><a href="information.html#wc">Word Clouds</a></li>
+							</ul>
 							</li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
+							<li><a href="https://github.com/ymorsi7/HateSpeechNLP" target = "blank"><i class="fa-brands fa-github"></i></a></li>
+								</ul>
+								
+							</li>
 						</ul>
 					</nav>
 				</header>
@@ -48,11 +37,11 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps. Lots of mother flipping apps.</p>
+							<h2>HateSpeechNLP: Rumble</h2>
+							<p>Detecting and analyzing hate speech on videos <br />
+								relating to sexism on a right-wing platform.</p>
 						</header>
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+						<span class="image"><img src="images/pic01.jpeg" alt="" /></span>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
@@ -65,23 +54,21 @@
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<header>
-										<h2>Odio faucibus ipsum integer consequat</h2>
-										<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
+										<h2>About This Project</h2>
+										<p>This is my first NLP project, where I try to detect hate speech on videos relating to sexism on the right-wing platform, Rumble.</p>
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-									augue varius tempus lobortis porttitor accumsan consequat
-									adipiscing lorem dolor.</p>
+									<li>NLP can be used to automatically analyze and structure text (quickly and cost-effectively).</li>
+									<li>Using TF-IDF vectorization, we located the most significant words in each comment section, and overall.</li>
+									<li>Subsequently, we trained a model to classify hate speech using data extracted from the site using a decision tree.</li>
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-									adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-									mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-									ipsum dolor nullam.</p>
+								<li>Because Rumble specifies that "systematic" retrieval of data is prohibited, I needed to scrape the data manually.</li>
+
+								<li>As someone who loves automation, this was a tough task, but it needed to be done.</li>
+									
+								<li>To find sexist content on Rumble, I selected five videos relating to sexism on the platform:</li>
 								</div>
 							</div>
 						</div>
@@ -94,13 +81,18 @@
 					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2>Interdum amet non magna accumsan</h2>
-							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+							<h2>Videos Observed</h2>
+							<p>(all from the site in question)</p>
 						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
+						<li><a href = "https://rumble.com/v1r74qk-women-should-not-be-in-combat-roles-change-my-mind.html" target = "blank">"Women Should Not Be in Combat Roles: Change My Mind"</a></li>
+						<li><a href = "https://rumble.com/v1wqypw-the-problem-with-modern-women-w-layah-heilpern-jedediah-bila-live-episode-6.html"target = "blank">"The Problem With Modern Women"</a></li>
+						<li><a href = "https://rumble.com/vfjlp5-tucker-carlson-gives-cnn-some-tips-about-sexism-in-hilarious-segment.html"target = "blank">"Tucker Carlson Gives CNN Some Tips About Sexism in Hilarious Segment"</a></li>
+						<li><a href = "https://rumble.com/v1q566l-woman-defends-andrew-tate-and-argues-with-feminists-and-trangenders-must-wa.html"target = "blank">"WOMAN DEFENDS ANDREW TATE AND ARGUES WITH FEMINISTS AND TRANGENDERS"</a></li>
+						<li><a href = "https://rumble.com/v1xflms-massive-feminist-march-against-gender-violence-in-rome.html"target = "blank">"Massive Feminist March Against Gender Violence in Rome"</a></li>
+						
+						<hr>
+						<p>I decided to select the top 50 comments on each video, which totaled 250 comments. An advantage of manually scraping the data is that I was able to notice certain sexist comments and analyze them.</p>
+						
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
@@ -110,13 +102,14 @@
 					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2>Interdum felis blandit praesent sed augue</h2>
-							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+							<h2>Case Studies</h2>
+							<p>The below comments show that there are different types of sexism, and that it is not always obvious. Such types seen above include employing derogatory terms, complimenting appearance, insulting appearance, and making generalizations.</p>
 						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
+						<ul>"Have you noticed it’s all the weird fat looking ones that hate Tate."</ul>
+						<ul>"Those are some fine daughters they've been raising in Europe."</ul>
+						<ul>"Women are equipped to be h*es."</ul>
+						<ul>"Women today do not know what a woman is supposed to be, they are to busy trying to be like men."</ul>
+						
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
@@ -125,79 +118,38 @@
 				<section id="four" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
-							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
+							<h2>Learn More</h2>
+							<p>Click the icons for more information about the individual tasks in the project</p>
 						</header>
 						<div class="box alt">
 							<div class="row gtr-uniform">
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Ipsum sed commodo</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Eleifend lorem ornare</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<h3>TD-IDF Vectorization</h3>
+									<p>The TF-IDF is then calculated by multiplying the term frequency and inverse document frequency.</p>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-flask"></span>
-									<h3>Cubilia cep lobortis</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<h3>Decision Tree Model</h3>
+									<p>After using scikit-learn's DecisionTreeClassifier() function, I trained the model on the data, and then tested it on the test data. The model achieved an accuracy of about 0.89, which is pretty good.</p>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Non semper interdum</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-file"></span>
-									<h3>Odio laoreet accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-lock"></span>
-									<h3>Massa arcu accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<h3>Word Clouds</h3>
+									<p>Using the Google Sheets extensions MeaningCloud and ChartExpo, I was able to create word clouds from extracted topics, deep categorization, text clustering, and IPTC text classification.</p>
 								</section>
 							</div>
 						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="#" class="button">Magna sed feugiat</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
-
-			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
-						<form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-							</div>
-						</form>
 					</div>
 				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/ymorsi7/HateSpeechNLP" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2022. All rights reserved.</li>
 					</ul>
 				</footer>
 
@@ -212,6 +164,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://kit.fontawesome.com/97ac8d9bb6.js" crossorigin="anonymous"></script>
 
 	</body>
 </html>

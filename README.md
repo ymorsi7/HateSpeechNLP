@@ -4,6 +4,8 @@
 
 This is my first NLP project, where I try to detect hate speech on videos relating to sexism on the right-wing platform, Rumble.
 
+The following is a list of my initial thoughts:
+
 - NLP can be used to automatically analyze and structure text (quickly and cost-effectively).
 - Using TF-IDF vectorization, we’ll locate the most significant words in each comment section, and overall.
 - Subsequently, we will train a model to classify hate speech using data extracted from the site using a decision tree.
@@ -234,7 +236,7 @@ To train the hate speech detection model, I used Kaggle's ["Hate Speech and Offe
 
 After importing NLTK, I loaded in the labeled Kaggle data, preprocessed it, and split it, as done in [this tutorial.](https://copyassignment.com/hate-speech-detection/)
 
-Aftter using scikit-learn's DecisionTreeClassifier() function, I trained the model on the data, and then tested it on the test data. The model achieved an accuracy of about 0.89, which is pretty good.
+After using scikit-learn's DecisionTreeClassifier() function, I trained the model on the data, and then tested it on the test data. The model achieved an accuracy of about 0.89, which is pretty good.
 
 ```python
 binClfr = [] # list (0 or 1)
