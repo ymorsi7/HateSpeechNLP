@@ -4,7 +4,7 @@
 
 This is my first NLP project, where I try to detect hate speech on videos relating to sexism on the right-wing platform, Rumble.
 
-For the website I created for this project, click [here](https://cute-rugelach-1cd3d3.netlify.app/site/index.html).
+For the website I created for this project, click [here](https://cute-rugelach-1cd3d3.netlify.app/).
 
 The following is a list of my initial thoughts:
 
