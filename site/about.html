@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<link rel="stylesheet" href="assets/css/snippet.css">
-	<link rel="icon" type="image/x-icon" href="images/favi.png">
+	<link rel="icon" type="image/x-icon" href="images/pic01.jpeg">
 </head>
 
 <body class="is-preload">
@@ -87,10 +87,10 @@
 									corpus. After that, we create a dataframe of the top n words in the corpus, and
 									return it to the user.</p>
 
-								<a href="https://github.com/ymorsi7/HateSpeechNLP#term-frequency-inverse-document-frequency-tf-idf"
-									target="blank">
-									<p>Click here to see the function for this.</p>
-								</a>
+								
+									<p>Click <a href="https://github.com/ymorsi7/HateSpeechNLP#term-frequency-inverse-document-frequency-tf-idf"
+										target="blank">here</a> to see the function for this.</p>
+								
 
 								<p>Below is a list of the top 15 words from the comments found with TF-IDF
 									vectorization:</p>
@@ -115,9 +115,9 @@
 
 												</code>
 								<br>
-								<a href="https://github.com/ymorsi7/HateSpeechNLP#video-1" target="blank">
-									<p>Click here to see the top 15 words for the individual videos.</p>
-								</a>
+								
+									<p>Click <a href="https://github.com/ymorsi7/HateSpeechNLP#video-1" target="blank">here</a> to see the top 15 words for the individual videos.</p>
+								
 
 
 								<p>The TF-IDF localization proved to be useful, as it shows the prevelance of words such
@@ -141,15 +141,21 @@
 
 						<!-- Content -->
 						<section id="content">
-							<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+							<a href="#" class="image fit"><img src="images/pic05.jpeg" alt="" /></a>
 							<h3>Decision Tree Model</h3>
-							<p>To train the hate speech detection model, I used Kaggle's <a href = "https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset" target = "blank">"Hate Speech and Offensive Language Dataset."</a></p>
-							<p>After importing NLTK, I loaded in the labeled Kaggle data, preprocessed it, and split it, as done in <a href = "https://copyassignment.com/hate-speech-detection/">this tutorial.</a></p>
-							<p>After using scikit-learn's DecisionTreeClassifier() function, I trained the model on the data, and then tested it on the test data. The model achieved an accuracy of about 0.89, which is pretty good.</p>
+							<p>To train the hate speech detection model, I used Kaggle's <a
+									href="https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset"
+									target="blank">"Hate Speech and Offensive Language Dataset."</a></p>
+							<p>After importing NLTK, I loaded in the labeled Kaggle data, preprocessed it, and split it,
+								as done in <a href="https://copyassignment.com/hate-speech-detection/">this
+									tutorial.</a></p>
+							<p>After using scikit-learn's DecisionTreeClassifier() function, I trained the model on the
+								data, and then tested it on the test data. The model achieved an accuracy of about 0.89,
+								which is pretty good.</p>
 
 							<body>
-								
-	<pre><code class="python">
+
+								<pre><code class="python">
 binClfr = [] # list (0 or 1)
 numHate = 0 # a counter for the number of hate comments
 for i in range(len(commentsList)):
@@ -163,19 +169,47 @@ for i in range(len(commentsList)):
 		binClfr.append(9) # Add 9 if output it neither (shouldn't happen; means that there's an error)
 	print(model.predict(inp))
 </code></pre>
-	</body>
+							</body>
 
-							<h3 id="wc">Word Clouds</h3>
-							<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus.
-								Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit
-								in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum
-								metus.</p>
+							<pre><code class="python">
+print("Percentage of hate speech comments: " + str(numHate/len(binClfr)))
+								</code></pre>
+
+							<p>The above code, meant to find the percentage of hate speech comments, yielded <b>.26</b>,
+								which shows that over one quarter of the comments on these videos are hate speech.</p>
+
+							<p> The NLP analysis conducted shows us that a significant percentage of comments on the
+								videos relating to sexism on Rumble contain hate speech. Case studies above show that
+								there are various types of sexism on the platform, but all in all, they come together to
+								form a staggering 26% of the comments found on the videos.
+
+							</p>
+
+
+							<h3 id="wc">Word Clouds (Bonus)</h3>
+							<p>Using the Google Sheets extensions <a href="https://www.meaningcloud.com/"
+									target="blank">MeaningCloud</a> and <a href="https://www.chartexpo.com"
+									target="blank">ChartExpo</a>, I was able to create word clouds from extracted
+								topics, deep categorization, text clustering, and IPTC text classification.</p>
+
+							<p>The CSV files containing the extracted topics, deep categorization, text clustering, and
+								IPTC text classification can be found <a
+									href="https://github.com/ymorsi7/HateSpeechNLP/tree/main/bonus">here</a>.</p>
+
+
 							<ul>
-								<li>Faucibus orci lobortis ac adipiscing integer.</li>
-								<li>Col accumsan arcu mi aliquet placerat.</li>
-								<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-								<li>Blandit massa non blandit tempor interdum.</li>
-								<li>Lacinia mattis arcu nascetur lobortis.</li>
+								<li>Deep Categorization<br><img
+										src="https://raw.githubusercontent.com/ymorsi7/HateSpeechNLP/main/wordclouds/deepCategorization.png"
+										width=80%></li>
+								<li>Text Clustering<br><img
+										src="https://raw.githubusercontent.com/ymorsi7/HateSpeechNLP/main/wordclouds/textClustering.png"
+										width=80%></li>
+								<li>IPTC Text Classification<br><img
+										src="https://raw.githubusercontent.com/ymorsi7/HateSpeechNLP/main/wordclouds/iptc.png"
+										width=80%></li>
+								<li>Topics Extraction<br><img
+										src="https://raw.githubusercontent.com/ymorsi7/HateSpeechNLP/main/wordclouds/topicExt.png"
+										width=80%></li>
 							</ul>
 						</section>
 
@@ -187,16 +221,11 @@ for i in range(len(commentsList)):
 		<!-- Footer -->
 		<footer id="footer">
 			<ul class="icons">
-				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="https://github.com/ymorsi7/HateSpeechNLP" class="icon brands alt fa-github"><span
+							class="label">GitHub</span></a></li>
 			</ul>
 			<ul class="copyright">
-				<li>&copy; Untitled. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				<li>&copy; 2022. All rights reserved.</li>
 			</ul>
 		</footer>
 
