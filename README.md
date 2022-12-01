@@ -227,7 +227,7 @@ combat    0.149216
 it        0.145994
 ```
 
-The TD-IDF localization proved to be useful, as it shows the prevelance of words such as "woman," "injured," and "affected" in the comments. This is useful, as it shows that the users are engaged in their respective videos, and have a lot to say about women.
+The TF-IDF localization proved to be useful, as it shows the prevelance of words such as "woman," "injured," and "affected" in the comments. This is useful, as it shows that the users are engaged in their respective videos, and have a lot to say about women.
 
 
 ## Decision Tree Hate Speech Detection Model

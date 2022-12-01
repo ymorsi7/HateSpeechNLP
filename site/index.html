@@ -1,170 +1,197 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>HateSpeechNLP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/x-icon" href="images/favi.png">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">HateSpeechNLP</a></h1>
-					<nav id="nav">
+<head>
+	<title>HateSpeechNLP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/x-icon" href="images/pic01.jpeg">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload landing">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1 id="logo"><a href="index.html">HateSpeechNLP</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<a href="#">About</a>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#">About</a>
-								<ul>
-									<li><a href="about.html#tf">TF-IDF Vectorization</a></li>
-									<li><a href="about.html#dt">Decision Tree</a></li>
-									<li><a href="about.html#wc">Word Clouds</a></li>
-							</ul>
-							</li>
-							<li><a href="https://github.com/ymorsi7/HateSpeechNLP" target = "blank"><i class="fa-brands fa-github"></i></a></li>
-								</ul>
-								
-							</li>
+							<li><a href="about.html#tf">TF-IDF Vectorization</a></li>
+							<li><a href="about.html#dt">Decision Tree</a></li>
+							<li><a href="about.html#wc">Word Clouds</a></li>
 						</ul>
-					</nav>
+					</li>
+					<li><a href="https://github.com/ymorsi7/HateSpeechNLP" target="blank"><i
+								class="fa-brands fa-github"></i></a></li>
+				</ul>
+
+				</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="content">
+				<header>
+					<h2>HateSpeechNLP: Rumble</h2>
+					<p>Detecting and analyzing hate speech on videos <br />
+						relating to sexism on a right-wing platform.</p>
 				</header>
+				<span class="image"><img src="images/pic01.jpeg" alt="" /></span>
+			</div>
+			<a href="#one" class="goto-next scrolly">Next</a>
+		</section>
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>HateSpeechNLP: Rumble</h2>
-							<p>Detecting and analyzing hate speech on videos <br />
-								relating to sexism on a right-wing platform.</p>
-						</header>
-						<span class="image"><img src="images/pic01.jpeg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+		<!-- One -->
+		<section id="one" class="spotlight style1 bottom">
+			<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-12-medium">
+							<header>
+								<h2>About This Project</h2>
+								<p>This is my first NLP project, where I try to detect hate speech on videos relating to
+									sexism on the right-wing platform, Rumble.</p>
+							</header>
+						</div>
+						<div class="col-4 col-12-medium">
+							<li>NLP can be used to automatically analyze and structure text (quickly and
+								cost-effectively).</li>
+							<li>Using TF-IDF vectorization, we located the most significant words in each comment
+								section, and overall.</li>
+							<li>Subsequently, we trained a model to classify hate speech using data extracted from the
+								site using a decision tree.</li>
+						</div>
+						<div class="col-4 col-12-medium">
+							<li>Because Rumble specifies that "systematic" retrieval of data is prohibited, I needed to
+								scrape the data manually.</li>
 
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>About This Project</h2>
-										<p>This is my first NLP project, where I try to detect hate speech on videos relating to sexism on the right-wing platform, Rumble.</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<li>NLP can be used to automatically analyze and structure text (quickly and cost-effectively).</li>
-									<li>Using TF-IDF vectorization, we located the most significant words in each comment section, and overall.</li>
-									<li>Subsequently, we trained a model to classify hate speech using data extracted from the site using a decision tree.</li>
-								</div>
-								<div class="col-4 col-12-medium">
-								<li>Because Rumble specifies that "systematic" retrieval of data is prohibited, I needed to scrape the data manually.</li>
+							<li>As someone who loves automation, this was a tough task, but it needed to be done.</li>
 
-								<li>As someone who loves automation, this was a tough task, but it needed to be done.</li>
-									
-								<li>To find sexist content on Rumble, I selected five videos relating to sexism on the platform:</li>
-								</div>
-							</div>
+							<li>To find sexist content on Rumble, I selected five videos relating to sexism on the
+								platform:</li>
 						</div>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
+				</div>
+			</div>
+			<a href="#two" class="goto-next scrolly">Next</a>
+		</section>
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Videos Observed</h2>
-							<p>(all from the site in question)</p>
-						</header>
-						<li><a href = "https://rumble.com/v1r74qk-women-should-not-be-in-combat-roles-change-my-mind.html" target = "blank">"Women Should Not Be in Combat Roles: Change My Mind"</a></li>
-						<li><a href = "https://rumble.com/v1wqypw-the-problem-with-modern-women-w-layah-heilpern-jedediah-bila-live-episode-6.html"target = "blank">"The Problem With Modern Women"</a></li>
-						<li><a href = "https://rumble.com/vfjlp5-tucker-carlson-gives-cnn-some-tips-about-sexism-in-hilarious-segment.html"target = "blank">"Tucker Carlson Gives CNN Some Tips About Sexism in Hilarious Segment"</a></li>
-						<li><a href = "https://rumble.com/v1q566l-woman-defends-andrew-tate-and-argues-with-feminists-and-trangenders-must-wa.html"target = "blank">"WOMAN DEFENDS ANDREW TATE AND ARGUES WITH FEMINISTS AND TRANGENDERS"</a></li>
-						<li><a href = "https://rumble.com/v1xflms-massive-feminist-march-against-gender-violence-in-rome.html"target = "blank">"Massive Feminist March Against Gender Violence in Rome"</a></li>
-						
-						<hr>
-						<p>I decided to select the top 50 comments on each video, which totaled 250 comments. An advantage of manually scraping the data is that I was able to notice certain sexist comments and analyze them.</p>
-						
+		<!-- Two -->
+		<section id="two" class="spotlight style2 right">
+			<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+			<div class="content">
+				<header>
+					<h2>Videos Observed</h2>
+					<p>(all from the site in question)</p>
+				</header>
+				<li><a href="https://rumble.com/v1r74qk-women-should-not-be-in-combat-roles-change-my-mind.html"
+						target="blank">"Women Should Not Be in Combat Roles: Change My Mind"</a></li>
+				<li><a href="https://rumble.com/v1wqypw-the-problem-with-modern-women-w-layah-heilpern-jedediah-bila-live-episode-6.html"
+						target="blank">"The Problem With Modern Women"</a></li>
+				<li><a href="https://rumble.com/vfjlp5-tucker-carlson-gives-cnn-some-tips-about-sexism-in-hilarious-segment.html"
+						target="blank">"Tucker Carlson Gives CNN Some Tips About Sexism in Hilarious Segment"</a></li>
+				<li><a href="https://rumble.com/v1q566l-woman-defends-andrew-tate-and-argues-with-feminists-and-trangenders-must-wa.html"
+						target="blank">"WOMAN DEFENDS ANDREW TATE AND ARGUES WITH FEMINISTS AND TRANGENDERS"</a></li>
+				<li><a href="https://rumble.com/v1xflms-massive-feminist-march-against-gender-violence-in-rome.html"
+						target="blank">"Massive Feminist March Against Gender Violence in Rome"</a></li>
+
+				<hr>
+				<p>I decided to select the top 50 comments on each video, which totaled 250 comments. An advantage of
+					manually scraping the data is that I was able to notice certain sexist comments and analyze them.
+				</p>
+
+			</div>
+			<a href="#three" class="goto-next scrolly">Next</a>
+		</section>
+
+		<!-- Three -->
+		<section id="three" class="spotlight style3 left">
+			<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+			<div class="content">
+				<header>
+					<h2>Case Studies</h2>
+					<p>The below comments show that there are different types of sexism, and that it is not always
+						obvious. Such types seen above include employing derogatory terms, complimenting appearance,
+						insulting appearance, and making generalizations.</p>
+				</header>
+				<ul>"Have you noticed it’s all the weird fat looking ones that hate Tate."</ul>
+				<ul>"Those are some fine daughters they've been raising in Europe."</ul>
+				<ul>"Women are equipped to be h*es."</ul>
+				<ul>"Women today do not know what a woman is supposed to be, they are to busy trying to be like men."
+				</ul>
+
+			</div>
+			<a href="#four" class="goto-next scrolly">Next</a>
+		</section>
+
+		<!-- Four -->
+		<section id="four" class="wrapper style1 special fade-up">
+			<div class="container">
+				<header class="major">
+					<h2>Learn More</h2>
+					<p>Click the icons for more information about the individual tasks in the project</p>
+				</header>
+				<div class="box alt">
+					<div class="row gtr-uniform">
+						<section class="col-4 col-6-medium col-12-xsmall">
+							<a href="about.html#tf"> <span class="icon solid alt major fa-chart-area"></span></a>
+							<h3>TF-IDF Vectorization</h3>
+							<p>The TF-IDF is calculated by multiplying the term frequency and inverse document
+								frequency.</p>
+						</section>
+						<section class="col-4 col-6-medium col-12-xsmall">
+							<a href="about.html#dt"><span class="icon solid alt major fa-flask"></span></a>
+							<h3>Decision Tree Model</h3>
+							<p>After using scikit-learn's DecisionTreeClassifier() function, I trained the model on the
+								data, and then tested it on the test data. The model achieved an accuracy of about 0.89.</p>
+						</section>
+						<section class="col-4 col-6-medium col-12-xsmall">
+							<a href="about.html#wc"><span class="icon solid alt major fa-paper-plane"></span></a>
+							<h3>Word Clouds</h3>
+							<p>Using the Google Sheets extensions MeaningCloud and ChartExpo, I was able to create word
+								clouds from extracted topics, deep categorization, text clustering, and IPTC text
+								classification.</p>
+						</section>
 					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+				</div>
+			</div>
+		</section>
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Case Studies</h2>
-							<p>The below comments show that there are different types of sexism, and that it is not always obvious. Such types seen above include employing derogatory terms, complimenting appearance, insulting appearance, and making generalizations.</p>
-						</header>
-						<ul>"Have you noticed it’s all the weird fat looking ones that hate Tate."</ul>
-						<ul>"Those are some fine daughters they've been raising in Europe."</ul>
-						<ul>"Women are equipped to be h*es."</ul>
-						<ul>"Women today do not know what a woman is supposed to be, they are to busy trying to be like men."</ul>
-						
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://github.com/ymorsi7/HateSpeechNLP" class="icon brands alt fa-github"><span
+							class="label">GitHub</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; 2022. All rights reserved.</li>
+			</ul>
+		</footer>
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Learn More</h2>
-							<p>Click the icons for more information about the individual tasks in the project</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href = "about.html#tf"> <span class = "icon solid alt major fa-chart-area"></span></a>	
-									<h3>TF-IDF Vectorization</h3>
-									<p>The TF-IDF is then calculated by multiplying the term frequency and inverse document frequency.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href = "about.html#dt"><span class="icon solid alt major fa-flask"></span></a>
-									<h3>Decision Tree Model</h3>
-									<p>After using scikit-learn's DecisionTreeClassifier() function, I trained the model on the data, and then tested it on the test data. The model achieved an accuracy of about 0.89, which is pretty good.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href = "about.html#wc"><span class="icon solid alt major fa-paper-plane"></span></a>
-									<h3>Word Clouds</h3>
-									<p>Using the Google Sheets extensions MeaningCloud and ChartExpo, I was able to create word clouds from extracted topics, deep categorization, text clustering, and IPTC text classification.</p>
-								</section>
-							</div>
-						</div>
-					</div>
-				</section>
+	</div>
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://github.com/ymorsi7/HateSpeechNLP" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2022. All rights reserved.</li>
-					</ul>
-				</footer>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://kit.fontawesome.com/97ac8d9bb6.js" crossorigin="anonymous"></script>
 
-		</div>
+</body>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://kit.fontawesome.com/97ac8d9bb6.js" crossorigin="anonymous"></script>
-
-	</body>
 </html>
