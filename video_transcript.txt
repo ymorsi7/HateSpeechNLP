@@ -1,23 +1,44 @@
 ﻿Hi, my name is Yusuf, and I am here to discuss my NLP Hate Speech project on the popular right-wing video streaming service, Rumble. 
 
 
-The motivation behind my project was to investigate the notion that the users on this site are full of hate, and express it in ways such as sexism. Algorithms of Oppression by Safiya Noble, which I recently read, inspired this project, as it allowed me to realize that many websites are inspired by users and their beliefs, which does not justify the prevalence of offensive behavior on a website. 
+The motivation behind my project was to investigate the notion that the users on this site are full of hate, and express it in ways such as sexism.
+Algorithms of Oppression by Safiya Noble, which I recently read, inspired this project, as it allowed me to realize that many websites are inspired by
+users and their beliefs, which does not justify the prevalence of offensive behavior on a website. 
 
 
-So, in this project, I utilized a few NLP methods to investigate comments on its videos. Because I wanted to focus more on sexism, as the notion that users on the site are sexist is very popular, I decided to select 5 videos relating to sexism, and analyze their comments. I decided to use TF-IDF vectorization to find the relevance of certain words in the comments, use a decision tree classifier to detect hate speech, sentiment analysis to detect irony. As a bonus, I decided to create new files for extracted topics, deep categorization, text clustering, and IPTC text classification to create word clouds for the visual factor.
+So, in this project, I utilized a few NLP methods to investigate comments on its videos. Because I wanted to focus more on sexism, as the notion that users
+on the site are sexist is very popular, I decided to select 5 videos relating to sexism, and analyze their comments. I decided to use TF-IDF vectorization
+to find the relevance of certain words in the comments, use a decision tree classifier to detect hate speech, sentiment analysis to detect irony. As a
+bonus, I decided to create new files for extracted topics, deep categorization, text clustering, and IPTC text classification to create word clouds for the
+visual factor.
 
 
-And, I also wanted to mention, this site states that a user cannot "systemically" scrape their website, so I had to scrape the comments manually, which was time-consuming, but led to less data cleansing later on. So, my final deliverables include a ipynb code file showing the code behind the TF-IDF vectorization and the decision tree classifier; a README.md file explaining the project, a project website created with HTML, CSS, and JavaScript, and CSV files showing the extracted topics, deep categorization, text clustering, and IPTC text classification, and word clouds.
+And, I also wanted to mention, this site states that a user cannot "systemically" scrape their website, so I had to scrape the comments manually, 
+which was time-consuming, but led to less data cleansing later on. So, my final deliverables include a ipynb code file showing the code behind the TF-IDF
+vectorization and the decision tree classifier; a README.md file explaining the project, a project website created with HTML, CSS, and JavaScript, and 
+CSV files showing the extracted topics, deep categorization, text clustering, and IPTC text classification, and word clouds.
 
 
-And just to show real quick, the various deliverables… so we have a project which is here, where it basically explains the project, what was done, and even has a poll at the very end; and in addition, it also goes more in detail if you go to the about page, where everything, even some code snippets, are readily available. and like I mentioned before, there is also a README file, which has a table of contents, which makes it easier to go throughout the file and look at the various aspects of it, CSV files, which show the different analyses that were done on the data (this is for instance the deep categorization CSV file), and like i mentioned before, there are also word clouds, which are available at the bottom of the README file, in addition to the word clouds folder in the Github repository.
-]I expect this project to impact its audience by showing the prevalence of hate speech on this site, and sites known for priding themselves in hosting "canceled" individuals. I also wish for this to be an example of how users' hate speech can impact the experience on a site
+And just to show real quick, the various deliverables… so we have a project which is here, where it basically explains the project, what was done, and 
+even has a poll at the very end; and in addition, it also goes more in detail if you go to the about page, where everything, even some code snippets, 
+are readily available. and like I mentioned before, there is also a README file, which has a table of contents, which makes it easier to go throughout 
+the file and look at the various aspects of it, CSV files, which show the different analyses that were done on the data (this is for instance the deep categorization CSV file), and like i mentioned before, there are also word clouds, which are available at the bottom of the README file, in addition to
+the word clouds folder in the Github repository.
+
+I expect this project to impact its audience by showing the prevalence of hate speech on this site, and sites known for priding themselves in hosting
+"canceled" individuals. I also wish for this to be an example of how users' hate speech can impact the experience on a site
 
 
-If someone were to continue this project, I would say that I would wish for them to conduct a similar analysis on randomly selected videos on this site (not necessarily relating to sexism), and on comment sections on sites like youtube, comparing the prevalence of hate speech there. 
+If someone were to continue this project, I would say that I would wish for them to conduct a similar analysis on randomly selected videos on this site
+(not necessarily relating to sexism), and on comment sections on sites like youtube, comparing the prevalence of hate speech there. 
 
 
-For the interactive aspect of this video, I would first ask you all to answer in the comments if you believe that allowing a platform for hate speech is justifiable in pursuit of the first amendment. The goal of this is to help understand why certain language and individuals are allowed on this site, and whether it is a problem or not. Secondly, I'd like you to fill out the poll that I showed you earlier on the website, where it will ask whether you are familiar with the site and its content. This is in order to understand the scale of this issue.
+For the interactive aspect of this video, I would first ask you all to answer in the comments if you believe that allowing a platform for hate speech is
+justifiable in pursuit of the first amendment. The goal of this is to help understand why certain language and individuals are allowed on this site, and
+whether it is a problem or not. Secondly, I'd like you to fill out the poll that I showed you earlier on the website, where it will ask whether you are
+familiar with the site and its content. This is in order to understand the scale of this issue.
 
 
-And lastly, I wanted to thank you all for listening, and please feel free to reach out to me if you have any questions about this project. Thank you
+And lastly, I wanted to thank you all for listening, and please feel free to reach out to me if you have any questions about this project. 
+
+Thank you
