@@ -10,6 +10,35 @@ The following is a list of my initial thoughts:
 - Using TF-IDF vectorization, we’ll locate the most significant words in each comment section, and overall.
 - Subsequently, we will train a model to classify hate speech using data extracted from the site using a decision tree.
 
+
+
+## Table of Contents
+- [NLP Hate Speech Detection](#nlp-hate-speech-detection)
+  - [About](#about)
+  - [Table of Contents](#table-of-contents)
+  - [Scraping](#scraping)
+    - [Case Studies:](#case-studies)
+  - [Data Cleaning](#data-cleaning)
+  - [Term Frequency Inverse Document Frequency (TF-IDF)](#term-frequency-inverse-document-frequency-tf-idf)
+  - [TF-IDF Results](#tf-idf-results)
+      - [Video 1](#video-1)
+      - [Video 2](#video-2)
+      - [Video 3](#video-3)
+      - [Video 4](#video-4)
+      - [Video 5](#video-5)
+      - [Overall Top 15 Words](#overall-top-15-words)
+  - [Decision Tree Hate Speech Detection Model](#decision-tree-hate-speech-detection-model)
+  - [Hate Speech Detection Results](#hate-speech-detection-results)
+  - [Sentiment Analysis](#sentiment-analysis)
+  - [Conclusion](#conclusion)
+  - [Bonus: Word Clouds](#bonus-word-clouds)
+    - [Deep Categorization](#deep-categorization)
+    - [Text Clustering](#text-clustering)
+    - [IPTC Text Classification](#iptc-text-classification)
+    - [Topics Extraction](#topics-extraction)
+
+
+
 ## Scraping
 
 Before scraping, I checked Rumble's site, which stated the following.
@@ -230,6 +259,13 @@ it        0.145994
 The TF-IDF localization proved to be useful, as it shows the prevelance of words such as "woman," "injured," and "affected" in the comments. This is useful, as it shows that the users are engaged in their respective videos, and have a lot to say about women.
 
 
+<br>
+
+<hr>
+
+<br>
+
+
 ## Decision Tree Hate Speech Detection Model
 
 To train the hate speech detection model, I used Kaggle's ["Hate Speech and Offensive Language Dataset."](https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset) 
@@ -259,10 +295,37 @@ print("Percentage of hate speech comments: " + str(numHate/len(binClfr)))
 ```
 The above code, meant to find the percentage of hate speech comments, yielded .26, which shows that over one quarter of the comments on these videos are hate speech.
 
+
+<br>
+
+<hr>
+
+<br>
+
+## Sentiment Analysis
+
+Using [MeaningCloud](https://www.meaningcloud.com/), I was able to conduct sentiment analysis on the comments, which can be found [here](https://github.com/ymorsi7/HateSpeechNLP/tree/main/csv/sentimentAnalysis.csv).
+
+The main two numbers I observed were the irony and the agreement/disagreement proportions, but I spent more attention on the former. I was able to find that over 97% of the comments were unironic, and that 35% of the comments showed disagreement.
+
+The percentage of unironic comments shows that the users are serious about their beliefs, and not just joking around, which is a rather common justification for hate speech.
+
+<br>
+
+<hr>
+
+<br>
+
 ## Conclusion
 
-The NLP analysis conducted shows us that a significant percentage of comments on the videos relating to sexism on Rumble contain hate speech. Case studies above show that there are various types of sexism on the platform, but all in all, they come together to form a staggering 26% of the comments found on the videos.
+The NLP analysis conducted shows us that a significant percentage of comments on the videos relating to sexism on Rumble contain hate speech. Case studies above show that there are various types of sexism on the platform, but all in all, they come together to form a staggering 26% of the comments found on the videos; most of which are unironic.
 
+
+<br>
+
+<hr>
+
+<br>
 
 ## Bonus: Word Clouds
 
