@@ -59,13 +59,13 @@ After scraping the data, I needed to clean it. Thankfully, because I manually at
 <br>
 Below is how the TF (term frequency) is found:
 
-$TF = \frac{(number\:of\:instances\:of\:word\:in\:document)}{(total\:number\:of\:words\:in\:document)}$
+$TF = \frac{(number\ of\ instances\ of\ word\ in\ document)}{(total\ number\ of\ words\ in\ document)}$
 
 <br>
 
 The following is the method to calculate the IDF (inverse document frequency):
 
-$IDF = log(\frac{(number\:of\:documents\:in\:corpus)}{(number\:of\:documents\:containing\:term)})$
+$IDF = log(\frac{(number\ of\ documents\ in\ corpus)}{(number\ of\ documents\ containing\ term)})$
 
 <br>
 
