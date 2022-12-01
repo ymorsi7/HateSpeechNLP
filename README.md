@@ -6,6 +6,9 @@ This is my first NLP project, where I try to detect hate speech on videos relati
 
 For the website I created for this project, click [here](https://cute-rugelach-1cd3d3.netlify.app/).
 
+For the video presentation, click [here](https://youtu.be/txlp-4BAxR8).
+
+
 The following is a list of my initial thoughts:
 
 - NLP can be used to automatically analyze and structure text (quickly and cost-effectively).
