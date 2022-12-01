@@ -259,11 +259,7 @@ it        0.145994
 The TF-IDF localization proved to be useful, as it shows the prevelance of words such as "woman," "injured," and "affected" in the comments. This is useful, as it shows that the users are engaged in their respective videos, and have a lot to say about women.
 
 
-<br>
-
 <hr>
-
-<br>
 
 
 ## Decision Tree Hate Speech Detection Model
@@ -296,11 +292,8 @@ print("Percentage of hate speech comments: " + str(numHate/len(binClfr)))
 The above code, meant to find the percentage of hate speech comments, yielded .26, which shows that over one quarter of the comments on these videos are hate speech.
 
 
-<br>
-
 <hr>
 
-<br>
 
 ## Sentiment Analysis
 
@@ -310,22 +303,16 @@ The main two numbers I observed were the irony and the agreement/disagreement pr
 
 The percentage of unironic comments shows that the users are serious about their beliefs, and not just joking around, which is a rather common justification for hate speech.
 
-<br>
-
 <hr>
 
-<br>
 
 ## Conclusion
 
 The NLP analysis conducted shows us that a significant percentage of comments on the videos relating to sexism on Rumble contain hate speech. Case studies above show that there are various types of sexism on the platform, but all in all, they come together to form a staggering 26% of the comments found on the videos; most of which are unironic.
 
 
-<br>
-
 <hr>
 
-<br>
 
 ## Bonus: Word Clouds
 
