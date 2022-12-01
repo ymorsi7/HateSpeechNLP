@@ -22,7 +22,7 @@ The following is a list of my initial thoughts:
   - [About](#about)
   - [Table of Contents](#table-of-contents)
   - [Scraping](#scraping)
-    - [Case Studies:](#case-studies)
+    - [Case Studies](#case-studies)
   - [Data Cleaning](#data-cleaning)
   - [Term Frequency Inverse Document Frequency (TF-IDF)](#term-frequency-inverse-document-frequency-tf-idf)
   - [TF-IDF Results](#tf-idf-results)
