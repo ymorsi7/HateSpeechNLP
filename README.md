@@ -17,12 +17,16 @@ The following is a list of my initial thoughts:
 
 
 
+
 ## Table of Contents
+<details open>
+<summary>Click to Expand/Collapse</summary>
+
 - [NLP Hate Speech Detection](#nlp-hate-speech-detection)
   - [About](#about)
   - [Table of Contents](#table-of-contents)
   - [Scraping](#scraping)
-    - [Case Studies](#case-studies)
+    - [Case Studies:](#case-studies)
   - [Data Cleaning](#data-cleaning)
   - [Term Frequency Inverse Document Frequency (TF-IDF)](#term-frequency-inverse-document-frequency-tf-idf)
   - [TF-IDF Results](#tf-idf-results)
@@ -41,8 +45,9 @@ The following is a list of my initial thoughts:
     - [Text Clustering](#text-clustering)
     - [IPTC Text Classification](#iptc-text-classification)
     - [Topics Extraction](#topics-extraction)
+</details>
 
-
+<hr>
 
 ## Scraping
 
